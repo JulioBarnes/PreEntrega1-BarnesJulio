@@ -10,8 +10,7 @@ function App() {
       <header className='contenedorHeader'>
         <h1 className='misEstilos'>Perfumes Top</h1>
         <NavBar/>
-      </header>      
-                 
+      </header>                
       <ItemListContainer greeting='Esta es la tienda en la que vas a encontrar tu perfume perfecto para la ocación que necesites!🤩'/>
       <CardComponent title="JavaScript" />
       <ImagenPerfume />
