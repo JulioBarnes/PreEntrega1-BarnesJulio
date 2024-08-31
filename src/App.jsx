@@ -1,24 +1,20 @@
 import './App.css'
-import NavBar from './assets/components/NavBar';
-import TituloComponente from './assets/components/TituloComponente';
-import ItemListContainer from './assets/components/ItemListContainer';
+import NavBar from './components/NavBar';
+import TituloComponente from './components/TituloComponente';
+import ItemListContainer from './components/ItemListContainer';
+import CardComponent from './components/CardComponent';
+import ImagenPerfume from './components/ImagenPerfume';
 function App() {
-  const misEstilos = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent:'space-between',
-    alignItems:'center',
-    padding: '20px',
-    backgroundColor: '#f1f1f1',
-    color:'#55555',
-    fontFamily:'inherit'
-  };
-
   return (
-    <>      
-      <h1 style={misEstilos}>Perfumes Top</h1>
-      <NavBar/>           
+    <>
+      <header className='contenedorHeader'>
+        <h1 className='misEstilos'>Perfumes Top</h1>
+        <NavBar/>
+      </header>      
+                 
       <ItemListContainer greeting='Esta es la tienda en la que vas a encontrar tu perfume perfecto para la ocación que necesites!🤩'/>
+      <CardComponent title="JavaScript" />
+      <ImagenPerfume />
     </>
   )
 }
