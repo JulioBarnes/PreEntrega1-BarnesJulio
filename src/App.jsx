@@ -1,19 +1,33 @@
+
 import './App.css'
 import NavBar from './components/NavBar';
-import TituloComponente from './components/TituloComponente';
-import ItemListContainer from './components/ItemListContainer';
-import CardComponent from './components/CardComponent';
-import ImagenPerfume from './components/ImagenPerfume';
+import SearchComponent from './components/SearchComponent';
+import Home from './components/Home';
+import Parfums from './components/Parfums';
+import Femenino from './components/Femenino';
+import ParfumSolo from './components/ParfumSolo';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import ParfumGenero from './components/ParfumGenero';
 function App() {
+
   return (
     <>
-      <header className='contenedorHeader'>
-        <h1 className='misEstilos'>Perfumes Top</h1>
-        <NavBar/>
-      </header>                
-      <ItemListContainer greeting='Esta es la tienda en la que vas a encontrar tu perfume perfecto para la ocación que necesites!🤩'/>
-      <CardComponent title="JavaScript" />
-      <ImagenPerfume />
+      <BrowserRouter>
+        
+        <header className='contenedorHeader'>
+          <h1 className='tituloH1'>Perfumes Top</h1>
+          <NavBar/>
+          <SearchComponent/>
+        </header>     
+        <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/parfums' element={<Parfums/>}/>
+            <Route path='/femenino' element={<Femenino/>}/>
+            <Route path='/parfum/:parfId' element={<ParfumSolo/>}/>
+            <Route path='/genero/:parfGenero' element={<ParfumGenero/>}/>
+        </Routes>          
+        
+      </BrowserRouter>
     </>
   )
 }

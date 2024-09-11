@@ -1,0 +1,21 @@
+
+  
+  .buttonCounter {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  buttonCounter:hover {
+    background-color: #0056b3;
+  }
+  
+  buttonCounter:active {
+    background-color: #004094;
+  }

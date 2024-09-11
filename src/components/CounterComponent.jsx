@@ -1,4 +1,5 @@
 import { useState} from "react"
+import './CounterComponent.css'
 export default function CounterComponent(){
     const [counter, setcounter]= useState(1)
     const handleClickInc=()=>{
@@ -12,8 +13,8 @@ export default function CounterComponent(){
             <section>
                 <h2>Contador</h2>
                 <h3>{counter}</h3>
-                <button onClick={handleClickInc}>+</button>
-                <button onClick={handleClickDec}>-</button>
+                <button className="buttonCounter" onClick={handleClickInc}>+</button>
+                <button className="buttonCounter" onClick={handleClickDec}>-</button>
             </section>        
         </>
     )

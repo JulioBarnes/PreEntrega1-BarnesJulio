@@ -5,7 +5,9 @@ export default function ButtonComponent({nombre}){
     }
     return(
         <>
-            <button onClick={handleClick} className="misEstilosBoton">{nombre}</button>
+            <button className="estilosBoton">
+                <Link to={`/masculino`}>{nombre}</Link>
+            </button>
         </>
     )
 }
